@@ -1,0 +1,39 @@
+{
+    "collectCoverage": false,
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+        "js",
+        "json",
+        "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": "\\.(int|e2e)\\.spec\\.ts$",
+    "transform": {
+        "^.+\\.tsx?$": [
+            "ts-jest",
+            {
+                "diagnostics": false,
+                "isolatedModules": true,
+                "jsx": "react",
+                "target": "es2017",
+                "allowJs": true
+            }
+        ]
+    },
+    "collectCoverageFrom": [
+        "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "moduleNameMapper": {
+        "^@core/(.*)$": "<rootDir>/core/$1",
+        "^@users/(.*)$": "<rootDir>/users/$1",
+        "^@webinaires/(.*)$": "<rootDir>/webinaires/$1",
+        "^@shared/(.*)$": "<rootDir>/shared/$1",
+        "^@tests/(.*)$": "<rootDir>/tests/$1"
+    },
+    "maxWorkers": 1,
+    "testTimeout": 8000,
+    "globalSetup": "<rootDir>/tests/setup/global-setup.ts",
+    "globalTeardown": "<rootDir>/tests/setup/global-teardown.ts"
+}

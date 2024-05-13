@@ -1,0 +1,35 @@
+{
+    "collectCoverage": false,
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+        "js",
+        "json",
+        "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": "^(?!.*e2e\\.spec\\.ts$).*\\.spec\\.ts$",
+    "transform": {
+        "^.+\\.tsx?$": [
+            "ts-jest",
+            {
+                "diagnostics": false,
+                "isolatedModules": true,
+                "jsx": "react",
+                "target": "es2017",
+                "allowJs": true
+            }
+        ]
+    },
+    "collectCoverageFrom": [
+        "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "moduleNameMapper": {
+        "^@core/(.*)$": "<rootDir>/core/$1",
+        "^@users/(.*)$": "<rootDir>/users/$1",
+        "^@webinaires/(.*)$": "<rootDir>/webinaires/$1",
+        "^@shared/(.*)$": "<rootDir>/shared/$1",
+        "^@tests/(.*)$": "<rootDir>/tests/$1"
+    }
+}
